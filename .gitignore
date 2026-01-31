@@ -1,0 +1,25 @@
+# Python
+agentic_mentoring_venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment
+.env
+.env.local
+
+# Chainlit
+.chainlit/
+.files/
+
+# Data (lokal)
+data/assessments/*.json
+data/reports/*.pdf
+!data/assessments/.gitkeep
+!data/reports/.gitkeep
+
+# IDE
+.vscode/
+.idea/

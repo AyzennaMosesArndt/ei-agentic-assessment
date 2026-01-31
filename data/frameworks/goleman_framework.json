@@ -1,0 +1,123 @@
+{
+  "framework_info": {
+    "name": "Goleman's Emotional Intelligence Model",
+    "year": 1995,
+    "author": "Daniel Goleman",
+    "components": 5,
+    "description": "Framework zur Bewertung emotionaler Intelligenz basierend auf 5 Kernkompetenzen"
+  },
+  "skills": {
+    "self_awareness": {
+      "id": "self_awareness",
+      "name": "Selbstwahrnehmung",
+      "name_en": "Self-Awareness",
+      "definition": "Die Fähigkeit, eigene Emotionen zu erkennen und zu verstehen.",
+      "behavioral_indicators": [
+        "Erkennt eigene emotionale Zustände in verschiedenen Situationen",
+        "Versteht, wie eigene Emotionen das Verhalten beeinflussen",
+        "Kennt eigene Stärken und Schwächen realistisch",
+        "Kann eigene emotionale Trigger benennen",
+        "Reflektiert regelmäßig über eigene Reaktionen"
+      ],
+      "star_questions": [
+        "Beschreibe eine Situation, in der du stark emotional reagiert hast. Was war der Auslöser und wie hast du deine Emotion erkannt?",
+        "Erzähle von einem Moment, in dem du bemerkt hast, dass deine Emotionen deine Entscheidung beeinflusst haben. Wie bist du damit umgegangen?",
+        "Gib ein Beispiel für eine Situation, in der du deine Grenzen oder Schwächen erkannt hast. Was hast du daraus gelernt?"
+      ]
+    },
+    "self_regulation": {
+      "id": "self_regulation",
+      "name": "Selbststeuerung",
+      "name_en": "Self-Regulation",
+      "definition": "Die Fähigkeit, störende Emotionen und Impulse zu kontrollieren.",
+      "behavioral_indicators": [
+        "Bleibt in stressigen Situationen ruhig und überlegt",
+        "Kann Frustration kontrollieren und konstruktiv reagieren",
+        "Passt sich flexibel an Veränderungen an",
+        "Handelt integer auch unter Druck",
+        "Denkt vor dem Handeln nach (nicht impulsiv)"
+      ],
+      "star_questions": [
+        "Beschreibe eine stressige Situation, in der du ruhig bleiben musstest. Wie hast du deine Emotionen kontrolliert?",
+        "Erzähle von einem Moment, in dem du frustriert warst, aber konstruktiv reagiert hast statt emotional auszubrechen.",
+        "Gib ein Beispiel für eine unerwartete Veränderung, an die du dich anpassen musstest. Wie bist du vorgegangen?"
+      ]
+    },
+    "motivation": {
+      "id": "motivation",
+      "name": "Motivation",
+      "name_en": "Motivation",
+      "definition": "Intrinsische Leistungsorientierung und Optimismus.",
+      "behavioral_indicators": [
+        "Setzt sich hohe Standards und arbeitet darauf hin",
+        "Bleibt optimistisch trotz Rückschlägen",
+        "Zeigt Initiative ohne externe Belohnung",
+        "Ist committed gegenüber Zielen und Team",
+        "Findet Bedeutung in der Arbeit"
+      ],
+      "star_questions": [
+        "Beschreibe ein Projekt, bei dem du über das Erwartete hinausgegangen bist. Was hat dich angetrieben?",
+        "Erzähle von einem Rückschlag. Wie hast du dich motiviert, weiterzumachen?",
+        "Gib ein Beispiel für eine Aufgabe, die du aus eigenem Antrieb übernommen hast, ohne dass jemand es verlangt hat."
+      ]
+    },
+    "empathy": {
+      "id": "empathy",
+      "name": "Empathie",
+      "name_en": "Empathy",
+      "definition": "Die Fähigkeit, Emotionen anderer zu verstehen und darauf einzugehen.",
+      "behavioral_indicators": [
+        "Erkennt emotionale Signale bei anderen",
+        "Hört aktiv zu ohne direkt Lösungen anzubieten",
+        "Validiert Gefühle anderer ('Ich verstehe, dass...')",
+        "Passt Kommunikationsstil an Gegenüber an",
+        "Antizipiert emotionale Reaktionen anderer"
+      ],
+      "star_questions": [
+        "Beschreibe eine Situation, in der jemand verärgert oder frustriert war. Wie hast du darauf reagiert?",
+        "Erzähle von einem Konflikt, bei dem du die Perspektive der anderen Person verstehen musstest. Was hast du gemacht?",
+        "Gib ein Beispiel, bei dem du erkannt hast, dass jemand Hilfe brauchte, ohne dass die Person es direkt gesagt hat."
+      ]
+    },
+    "social_skills": {
+      "id": "social_skills",
+      "name": "Soziale Kompetenz",
+      "name_en": "Social Skills",
+      "definition": "Die Fähigkeit, Beziehungen zu managen und andere zu beeinflussen.",
+      "behavioral_indicators": [
+        "Kommuniziert klar und überzeugend",
+        "Baut tragfähige Beziehungen auf",
+        "Löst Konflikte konstruktiv",
+        "Arbeitet effektiv im Team",
+        "Kann andere für Ideen gewinnen"
+      ],
+      "star_questions": [
+        "Beschreibe eine Situation, in der du jemanden von deiner Idee überzeugen musstest. Wie bist du vorgegangen?",
+        "Erzähle von einem Konflikt in einem Team. Wie hast du zur Lösung beigetragen?",
+        "Gib ein Beispiel für eine erfolgreiche Zusammenarbeit. Was war dein Beitrag zum Teamerfolg?"
+      ]
+    }
+  },
+  "scoring_rubric": {
+    "5": {
+      "level": "Expert",
+      "description": "Alle 5 Indicators klar demonstriert, tiefe Reflexion, konkrete Beispiele"
+    },
+    "4": {
+      "level": "Proficient",
+      "description": "4 Indicators vorhanden, gute Beispiele mit erkennbarer Reflexion"
+    },
+    "3": {
+      "level": "Competent",
+      "description": "3 Indicators vorhanden, oberflächliche Beispiele, grundlegendes Verständnis"
+    },
+    "2": {
+      "level": "Developing",
+      "description": "1-2 Indicators, vage Beschreibungen, mangelndes Verständnis"
+    },
+    "1": {
+      "level": "Novice",
+      "description": "Keine klaren Indicators, fehlendes Verständnis der Kernkonzepte"
+    }
+  }
+}

@@ -47,55 +47,49 @@ class ReflectionAgent:
         
         system_prompt = f"""Du bist ein Reflection Agent für EI-Assessment.
 
-Analysiere User-Antworten schrittweise mit Chain-of-Thought:
+                        Analysiere User-Antworten schrittweise mit Chain-of-Thought:
 
-SCHRITT 1: STAR Extraction
-- Situation: Was war der Kontext?
-- Task: Welche Herausforderung?
-- Action: Was hat User gemacht?
-- Result: Was war das Ergebnis?
+                        SCHRITT 1: STAR Extraction
+                        - Situation: Was war der Kontext?
+                        - Task: Welche Herausforderung?
+                        - Action: Was hat User gemacht?
+                        - Result: Was war das Ergebnis?
 
-SCHRITT 2: EI Indicator Mapping
-Prüfe jeden dieser Behavioral Indicators:
-{json.dumps(behavioral_indicators, indent=2, ensure_ascii=False)}
+                        SCHRITT 2: EI Indicator Mapping
+                        Prüfe jeden dieser Behavioral Indicators:
+                        {json.dumps(behavioral_indicators, indent=2, ensure_ascii=False)}
 
-Für jeden Indicator:
-- Gefunden? (true/false)
-- Evidence: Konkrete Zitate aus der Antwort
-- Confidence: 0.0-1.0
+                        Für jeden Indicator:
+                        - Gefunden? (true/false)
+                        - Evidence: Konkrete Zitate aus der Antwort
+                        - Confidence: 0.0-1.0
 
-SCHRITT 3: Scoring (1-5 Skala)
-- 5 = Alle 5 Indicators klar demonstriert
-- 4 = 4 Indicators vorhanden
-- 3 = 3 Indicators vorhanden
-- 2 = 1-2 Indicators
-- 1 = Keine klaren Indicators
+                        WICHTIG - BEWERTUNGSPRINZIPIEN:
+                        - Sei wohlwollend: Wenn ein Indicator auch nur teilweise demonstriert wird → found=true
+                        - Implizite Hinweise zählen: "hab das Team zusammengebracht" → zeigt soziale Kompetenz
+                        - Benefit of the doubt: Im Zweifel für den User
+                        - Fokus auf Stärken: Suche aktiv nach positiven Signalen
 
-SCHRITT 4: Reasoning
-Erkläre deine Bewertung evidence-based.
+                        SCHRITT 3: Scoring (1-5 Skala)
+                        - 5 = Alle 5 Indicators demonstriert (auch implizit)
+                        - 4 = 4 Indicators ODER 3 sehr stark
+                        - 3 = 3 Indicators klar vorhanden
+                        - 2 = 1-2 Indicators
+                        - 1 = Keine klaren Indicators
 
-OUTPUT FORMAT (nur JSON, keine Markdown):
-{{
-  "star_analysis": {{
-    "situation": "...",
-    "task": "...",
-    "action": "...",
-    "result": "..."
-  }},
-  "indicators_found": [
-    {{
-      "indicator": "Indikator Name",
-      "found": true,
-      "evidence": ["Zitat 1", "Zitat 2"],
-      "confidence": 0.85
-    }}
-  ],
-  "indicators_missing": ["Indikator Name", ...],
-  "score": 3.5,
-  "reasoning": "Detaillierte Begründung...",
-  "confidence": 0.80
-}}
-"""
+                        SCHRITT 4: Reasoning
+                        Erkläre deine Bewertung evidence-based, fokussiere auf Stärken.
+
+                        OUTPUT FORMAT (nur JSON, keine Markdown):
+                        {{
+                        "star_analysis": {{...}},
+                        "indicators_found": [...],
+                        "indicators_missing": [...],
+                        "score": 3.5,
+                        "reasoning": "Detaillierte Begründung...",
+                        "confidence": 0.80
+                        }}
+                        """
         
         user_prompt = f"""Frage: {question}
 
