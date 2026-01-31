@@ -109,6 +109,14 @@ Analysiere diese Antwort Schritt für Schritt."""
         try:
             result = json.loads(response.content)
             
+            # Ensure evidence is always a list
+            for ind in result.get("indicators_found", []):
+                if isinstance(ind.get("evidence"), str):
+                    # Convert single string to list
+                    ind["evidence"] = [ind["evidence"]] if ind["evidence"] else []
+                elif not isinstance(ind.get("evidence"), list):
+                    ind["evidence"] = []
+            
             # Convert to ResponseAnalysis
             return ResponseAnalysis(
                 question_id=question_index,
@@ -122,8 +130,9 @@ Analysiere diese Antwort Schritt für Schritt."""
                 confidence=result["confidence"]
             )
         
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as e:
             # Fallback bei Parse-Error
+            print(f"JSON Parse Error: {e}")
             return ResponseAnalysis(
                 question_id=question_index,
                 star_analysis=STARAnalysis(
@@ -136,5 +145,22 @@ Analysiere diese Antwort Schritt für Schritt."""
                 indicators_missing=behavioral_indicators,
                 score=1.0,
                 reasoning="LLM Response konnte nicht geparst werden",
+                confidence=0.0
+            )
+        except Exception as e:
+            # Catch any other errors
+            print(f"Error creating ResponseAnalysis: {e}")
+            return ResponseAnalysis(
+                question_id=question_index,
+                star_analysis=STARAnalysis(
+                    situation="Error",
+                    task="",
+                    action="",
+                    result=""
+                ),
+                indicators_found=[],
+                indicators_missing=behavioral_indicators,
+                score=1.0,
+                reasoning=f"Error: {str(e)}",
                 confidence=0.0
             )
