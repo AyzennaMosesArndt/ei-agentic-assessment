@@ -125,6 +125,8 @@ def assessment_node(state: AgentState) -> AgentState:
 def dunning_kruger_node(state: AgentState) -> AgentState:
     """Dunning-Kruger Analyse."""
     dk_result = dk_analyzer.analyze(state)
+
+    print(f"🔍 DK RESULT: {dk_result}")  # DEBUG
     
     state["dunning_kruger_gap"] = dk_result["gap"]
     state["classification"] = dk_result["classification"]
