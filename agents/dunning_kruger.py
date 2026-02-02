@@ -5,7 +5,6 @@ Vergleicht Self-Report mit Agent-Assessment und klassifiziert Bias.
 from typing import Literal
 from agents.state import AgentState
 
-
 class DunningKrugerAnalyzer:
     """
     Analysiert Diskrepanz zwischen Selbsteinschätzung und tatsächlicher Leistung.
@@ -49,59 +48,16 @@ class DunningKrugerAnalyzer:
         else:
             return "calibrated"
     
-    def get_interpretation(
-        self, 
-        classification: str,
-        gap: float,
-        skill_name: str
-    ) -> str:
-        """
-        Generiert psychologisch fundierte Interpretation.
-        """
+    def get_interpretation(self, classification: str, gap: float, skill_name: str) -> str:
+        """Generiert Interpretation (1-2 Sätze max)."""
         interpretations = {
-            "overconfident": f"""**Selbstüberschätzung erkannt** (Gap: +{abs(gap):.1f})
-
-Du schätzt deine **{skill_name}** höher ein als dein gezeigtes Verhalten nahelegt. 
-Das ist ein häufiges Phänomen (Dunning-Kruger Effekt), besonders bei Kompetenzen 
-die schwer objektiv zu messen sind.
-
-💡 **Was bedeutet das?**
-- Du bist dir deiner Fähigkeiten bewusst, aber möglicherweise nicht aller Nuancen
-- Es gibt Raum für Entwicklung, den du vielleicht noch nicht siehst
-- Das ist normal und kein Grund zur Sorge!
-
-📈 **Empfehlung:**
-Achte besonders auf die Entwicklungsfelder im Feedback und hole dir externes 
-Feedback von Kollegen/Freunden ein.""",
+            "overconfident": f"Du schätzt dich bei **{skill_name}** etwas höher ein als dein Verhalten zeigt (Gap: +{abs(gap):.1f}). Das ist normal und bietet Raum für Entwicklung.",
             
-            "underconfident": f"""**Selbstunterschätzung erkannt** (Gap: {gap:.1f})
-
-Du unterschätzt deine **{skill_name}**! Dein gezeigtes Verhalten in den Beispielen 
-war stärker als deine Selbsteinschätzung vermuten lässt.
-
-💡 **Was bedeutet das?**
-- Du bist kompetenter als du denkst
-- Möglicherweise zu selbstkritisch oder vergleichst dich mit unrealistischen Standards
-- Das nennt man auch "Impostor Syndrome"
-
-📈 **Empfehlung:**
-Erkenne deine Stärken bewusst an! Du machst das besser als du glaubst.""",
+            "underconfident": f"Du unterschätzt deine **{skill_name}** (Gap: {gap:.1f}). Dein Verhalten zeigt mehr Kompetenz als du dir selbst zugestehst.",
             
-            "calibrated": f"""**Gut kalibriert!** (Gap: {gap:+.1f})
-
-Deine Selbsteinschätzung stimmt sehr gut mit deinem tatsächlichen Verhalten überein. 
-Das zeigt hohe Selbstwahrnehmung - eine Kernkompetenz emotionaler Intelligenz!
-
-💡 **Was bedeutet das?**
-- Du hast ein realistisches Bild deiner **{skill_name}**
-- Du kannst dich selbst gut reflektieren
-- Das ist eine wichtige Basis für persönliche Entwicklung
-
-📈 **Empfehlung:**
-Nutze diese Selbstkenntnis um gezielt an den Entwicklungsfeldern zu arbeiten."""
+            "calibrated": f"Deine Selbsteinschätzung bei **{skill_name}** stimmt gut mit deinem Verhalten überein (Gap: {gap:+.1f}). Das zeigt gute Selbstreflexion."
         }
-        
-        return interpretations[classification].strip()
+        return interpretations[classification]
     
     def analyze(self, state: AgentState) -> dict:
         """

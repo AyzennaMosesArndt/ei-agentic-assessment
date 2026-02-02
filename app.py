@@ -30,39 +30,34 @@ async def start():
     await cl.Message(
         content="""# 🧠 Emotional Intelligence Mentor Agent
 
-Willkommen zum **Emotional Intelligence Assessment** basierend auf Daniel Goleman's Forschung (1995)!
+                    Willkommen zum **Emotional Intelligence Assessment** basierend auf Daniel Goleman's Forschung (1995)!
 
-**Warum ist das wichtig?** - Studien zeigen: Emotionale Intelligenz korreliert signifikant mit Führungserfolg, Job-Zufriedenheit und  Unternehmensidentifikation (Miao et al., 2017, 2018). Während KI technische und standardisierbare Aufgaben übernimmt, steigt die Nachfrage nach emotional-sozialen Kompetenzen (World Economic Forum Future of Jobs Report, 2023). Goleman's Forschung bleibt top-aktuell. Vielleicht sogar aktueller denn je!
+                    **Warum ist das wichtig?** - Studien zeigen: Emotionale Intelligenz korreliert signifikant mit Führungserfolg, Job-Zufriedenheit und  Unternehmensidentifikation (Miao et al., 2017, 2018). Während KI technische und standardisierbare Aufgaben übernimmt, steigt die Nachfrage nach emotional-sozialen Kompetenzen (World Economic Forum Future of Jobs Report, 2023). Goleman's Forschung bleibt top-aktuell. Vielleicht sogar aktueller denn je!
 
-<details>
-<summary>📚 Quellen</summary>
+                    📚 Quellen
 
-<small>
-Miao, C., Humphrey, R. H., & Qian, S. (2017). A meta-analysis of emotional intelligence and work attitudes. *Journal of Occupational and Organizational Psychology, 90*(2), 177–202. https://doi.org/10.1111/joop.12167
+                    Miao, C., Humphrey, R. H., & Qian, S. (2017). A meta-analysis of emotional intelligence and work attitudes. *Journal of Occupational and Organizational Psychology, 90*(2), 177–202. https://doi.org/10.1111/joop.12167
 
-Miao, C., Humphrey, R. H., & Qian, S. (2018). Emotional intelligence and authentic leadership: a meta-analysis. *Leadership and Organization Development Journal, 39*(5), 679–690. https://doi.org/10.1108/LODJ-02-2018-0066
+                    Miao, C., Humphrey, R. H., & Qian, S. (2018). Emotional intelligence and authentic leadership: a meta-analysis. *Leadership and Organization Development Journal, 39*(5), 679–690. https://doi.org/10.1108/LODJ-02-2018-0066
 
-World Economic Forum. (2023). Future of Jobs Report 2023. https://www.weforum.org/publications/the-future-of-jobs-report-2023/
-</small>
+                    World Economic Forum. (2023). Future of Jobs Report 2023. https://www.weforum.org/publications/the-future-of-jobs-report-2023/
 
-</details>
+                    ---
 
----
+                    ## 📋 Ablauf (ca. 10-15 Minuten)
 
-## 📋 Ablauf (ca. 10-15 Minuten)
+                    **1. Skill-Auswahl** - Du wählst eine der 5 Emotional Intelligence Dimensionen  
+                    **2. Self-Report** - Du schätzt dich selbst ein (Skala 1-5)  
+                    **3. STAR-Interview** - Du beantwortest je Dimension 3 verhaltensbezogene Fragen zu konkreten Beispielen aus deinem Leben
+                    **4. Agentic Analyse** - Unser Agent System analysiert deine Antworten und zeigt Unterschiede zu deiner Selbstwahrnehmung (Dunning-Kruger-Effekt)
+                    **5. Transparente Analyse** - Du siehst jeden Reasoning-Step des Agents (XAI)  
 
-**1. Skill-Auswahl** - Du wählst eine der 5 Emotional Intelligence Dimensionen  
-**2. Self-Report** - Du schätzt dich selbst ein (Skala 1-5)  
-**3. STAR-Interview** - Du beantwortest je Dimension 3 verhaltensbezogene Fragen zu konkreten Beispielen aus deinem Leben
-**4. Agentic Analyse** - Unser Agent System analysiert deine Antworten und zeigt Unterschiede zu deiner Selbstwahrnehmung (Dunning-Kruger-Effekt)
-**5. Transparente Analyse** - Du siehst jeden Reasoning-Step des Agents (XAI)  
+                    🎁 **Bonus:** Teste **3+ Dimensionen** → Erhalte **kostenlosen PDF-Report** mit Radar Chart!
 
-🎁 **Bonus:** Teste **3+ Dimensionen** → Erhalte **kostenlosen PDF-Report** mit Radar Chart!
+                    ---
 
----
-
-**Bereit?** Schreib **"Ja"** oder **"Los"** und ich präsentiere dir die 5 Dimensionen!"""
-    ).send()
+                    **Bereit?** Schreib **"Ja"** oder **"Los"** und ich präsentiere dir die 5 Dimensionen!"""
+                        ).send()
 
 
 async def show_dimensions(session_id: str):
@@ -71,22 +66,22 @@ async def show_dimensions(session_id: str):
     
     msg = """## 🎯 Die 5 EI-Dimensionen nach Goleman
 
-**1️⃣ Selbstwahrnehmung** (Self-Awareness)  
-Die Fähigkeit, eigene Emotionen zu erkennen und zu verstehen. Du weißt, wann du wütend, traurig oder gestresst bist und verstehst *warum*.
+                **1️⃣ Selbstwahrnehmung** (Self-Awareness)  
+                Die Fähigkeit, eigene Emotionen zu erkennen und zu verstehen. Du weißt, wann du wütend, traurig oder gestresst bist und verstehst *warum*.
 
-**2️⃣ Selbststeuerung** (Self-Regulation)  
-Die Fähigkeit, störende Emotionen und Impulse zu kontrollieren. Du bleibst ruhig unter Druck und reagierst nicht impulsiv.
+                **2️⃣ Selbststeuerung** (Self-Regulation)  
+                Die Fähigkeit, störende Emotionen und Impulse zu kontrollieren. Du bleibst ruhig unter Druck und reagierst nicht impulsiv.
 
-**3️⃣ Motivation** (Motivation)  
-Intrinsische Leistungsorientierung und Optimismus. Du setzt dir hohe Ziele und bleibst dran, auch wenn's schwierig wird.
+                **3️⃣ Motivation** (Motivation)  
+                Intrinsische Leistungsorientierung und Optimismus. Du setzt dir hohe Ziele und bleibst dran, auch wenn's schwierig wird.
 
-**4️⃣ Empathie** (Empathy)  
-Die Fähigkeit, Emotionen anderer zu verstehen und darauf einzugehen. Du merkst, wenn jemand Hilfe braucht, auch ohne dass es gesagt wird.
+                **4️⃣ Empathie** (Empathy)  
+                Die Fähigkeit, Emotionen anderer zu verstehen und darauf einzugehen. Du merkst, wenn jemand Hilfe braucht, auch ohne dass es gesagt wird.
 
-**5️⃣ Soziale Kompetenz** (Social Skills)  
-Die Fähigkeit, Beziehungen zu managen und andere zu beeinflussen. Du kommunizierst klar, löst Konflikte konstruktiv und arbeitest gut im Team.
+                **5️⃣ Soziale Kompetenz** (Social Skills)  
+                Die Fähigkeit, Beziehungen zu managen und andere zu beeinflussen. Du kommunizierst klar, löst Konflikte konstruktiv und arbeitest gut im Team.
 
----
+                ---
 
 """
     
@@ -116,27 +111,27 @@ async def show_quality_tips():
     await cl.Message(
         content="""## 💡 Wichtig für beste Ergebnisse
 
-**Je ausführlicher deine Antworten, desto genauer die Analyse!**
+                    **Je ausführlicher deine Antworten, desto genauer die Analyse!**
 
-Beschreibe:
-- ✅ **Konkrete Situationen** (nicht "ich bin immer empathisch")
-- ✅ **Was du *getan* hast** (Aktionen, nicht nur Gedanken)
-- ✅ **Das Ergebnis** (was ist passiert?)
+                    Beschreibe:
+                    - ✅ **Konkrete Situationen** (nicht "ich bin immer empathisch")
+                    - ✅ **Was du *getan* hast** (Aktionen, nicht nur Gedanken)
+                    - ✅ **Das Ergebnis** (was ist passiert?)
 
----
+                    ---
 
-**Schlechtes Beispiel:**  
-> "Ich bin gut im Umgang mit Stress."
+                    **Schlechtes Beispiel:**  
+                    > "Ich bin gut im Umgang mit Stress."
 
-**Gutes Beispiel:**  
-> "Letzte Woche hatte ich 3 Deadlines gleichzeitig. Ich hab mir eine Prio-Liste gemacht, tief durchgeatmet und nacheinander abgearbeitet. Alle Deadlines geschafft ohne auszuflippen."
+                    **Gutes Beispiel:**  
+                    > "Letzte Woche hatte ich 3 Deadlines gleichzeitig. Ich hab mir eine Prio-Liste gemacht, tief durchgeatmet und nacheinander abgearbeitet. Alle Deadlines geschafft ohne auszuflippen."
 
----
+                    ---
 
-**So, jetzt aber wirklich... los geht's!** 🚀
+                    **So, jetzt aber wirklich... los geht's!** 🚀
 
-Schreib **"Bereit"** oder **"Start"** um mit dem Self-Report zu beginnen!"""
-    ).send()
+                    Schreib **"Bereit"** oder **"Start"** um mit dem Self-Report zu beginnen!"""
+                        ).send()
     
     cl.user_session.set("onboarding_step", "quality_tips_shown")
 
@@ -146,17 +141,17 @@ async def ask_self_report(skill_name: str):
     res = await cl.AskUserMessage(
         content=f"""## 📊 Self-Report: {skill_name}
 
-Wie schätzt du deine **{skill_name}** selbst ein?
+                    Wie schätzt du deine **{skill_name}** selbst ein?
 
-**Gib eine Zahl zwischen 1 und 5 ein:**
+                    **Gib eine Zahl zwischen 1 und 5 ein:**
 
-- **1** = Sehr niedrig (habe damit große Schwierigkeiten)
-- **2** = Niedrig (ausbaufähig)
-- **3** = Mittel (manchmal gut, manchmal nicht)
-- **4** = Gut (meistens kompetent)
-- **5** = Sehr gut (ist eine meiner Stärken)
+                    - **1** = Sehr niedrig (habe damit große Schwierigkeiten)
+                    - **2** = Niedrig (ausbaufähig)
+                    - **3** = Mittel (manchmal gut, manchmal nicht)
+                    - **4** = Gut (meistens kompetent)
+                    - **5** = Sehr gut (ist eine meiner Stärken)
 
-Deine Einschätzung:""",
+                    Deine Einschätzung:""",
         timeout=300
     ).send()
     
@@ -181,21 +176,21 @@ Deine Einschätzung:""",
     await cl.Message(
         content=f"""Danke! Du schätzt dich bei **{score}/5** ein.
 
----
+                    ---
 
-## 🎤 STAR-Interview (3 Fragen)
+                    ## 🎤 STAR-Interview (3 Fragen)
 
-Jetzt stelle ich dir **3 Fragen** nach der **STAR-Methode**:
+                    Jetzt stelle ich dir **3 Fragen** nach der **STAR-Methode**:
 
-- **S**ituation - Was war der Kontext?
-- **T**ask - Welche Herausforderung hattest du?
-- **A**ction - Was hast du konkret gemacht?
-- **R**esult - Was war das Ergebnis?
+                    - **S**ituation - Was war der Kontext?
+                    - **T**ask - Welche Herausforderung hattest du?
+                    - **A**ction - Was hast du konkret gemacht?
+                    - **R**esult - Was war das Ergebnis?
 
-**Nimm dir Zeit** für deine Antworten (3-5 Sätze pro Frage sind ideal).
+                    **Nimm dir Zeit** für deine Antworten (3-5 Sätze pro Frage sind ideal).
 
-Bereit? Schreib **"Los"** um zu starten!"""
-    ).send()
+                    Bereit? Schreib **"Los"** um zu starten!"""
+                        ).send()
     
     cl.user_session.set("awaiting_interview_start", True)
 
@@ -278,11 +273,11 @@ async def main(message: cl.Message):
         async with cl.Step(name="📚 Framework Loading", type="tool") as step:
             framework_msg = f"""## {skill_data['name']} ({skill_data['name_en']})
 
-**Definition:**  
-{skill_data['definition']}
+            **Definition:**  
+            {skill_data['definition']}
 
-**Behavioral Indicators (worauf wir achten):**
-"""
+            **Behavioral Indicators (worauf wir achten):**
+            """
             for i, indicator in enumerate(skill_data['behavioral_indicators'], 1):
                 framework_msg += f"\n{i}. {indicator}"
             
@@ -317,9 +312,9 @@ async def main(message: cl.Message):
             await cl.Message(
                 content="""## 👋 Danke fürs Mitmachen!
 
-Du kannst die Seite neu laden, um ein komplett neues Assessment zu starten.
+                        Du kannst die Seite neu laden, um ein komplett neues Assessment zu starten.
 
-Viel Erfolg bei der Weiterentwicklung deiner emotionalen Intelligenz! 🚀"""
+                        Viel Erfolg bei der Weiterentwicklung deiner emotionalen Intelligenz! 🚀"""
             ).send()
         else:
             await cl.Message(
@@ -360,14 +355,14 @@ async def conduct_interview(state: AgentState):
     # STAR Examples hinzufügen
     examples = {
         0: """**Beispiel einer guten Antwort:**
-> "Im letzten Projekt (Situation) musste ich ein konfliktgeladenes Meeting moderieren (Task). Ich hab zuerst alle Perspektiven gehört ohne zu unterbrechen, dann gemeinsam Prioritäten definiert (Action). Am Ende hatten wir einen Konsens und das Projekt lief weiter (Result)."
-""",
-        1: """**Beispiel einer guten Antwort:**
-> "Bei einem spontanen Kunden-Complaint (Situation) war mein erster Impuls, defensiv zu reagieren (Task: ruhig bleiben). Ich hab tief durchgeatmet, aktiv zugehört und erst dann geantwortet (Action). Der Kunde hat sich beruhigt und wir konnten eine Lösung finden (Result)."
-""",
-        2: """**Beispiel einer guten Antwort:**
-> "Nach einem Rückschlag im letzten Quartal (Situation) musste ich das Team neu motivieren (Task). Ich hab eine Retrospektive gemacht, Erfolge gefeiert und neue Ziele gesetzt (Action). Das Team war wieder motiviert und wir haben die Ziele im nächsten Quartal übertroffen (Result)."
-"""
+            > "Im letzten Projekt (Situation) musste ich ein konfliktgeladenes Meeting moderieren (Task). Ich hab zuerst alle Perspektiven gehört ohne zu unterbrechen, dann gemeinsam Prioritäten definiert (Action). Am Ende hatten wir einen Konsens und das Projekt lief weiter (Result)."
+            """,
+                    1: """**Beispiel einer guten Antwort:**
+            > "Bei einem spontanen Kunden-Complaint (Situation) war mein erster Impuls, defensiv zu reagieren (Task: ruhig bleiben). Ich hab tief durchgeatmet, aktiv zugehört und erst dann geantwortet (Action). Der Kunde hat sich beruhigt und wir konnten eine Lösung finden (Result)."
+            """,
+                    2: """**Beispiel einer guten Antwort:**
+            > "Nach einem Rückschlag im letzten Quartal (Situation) musste ich das Team neu motivieren (Task). Ich hab eine Retrospektive gemacht, Erfolge gefeiert und neue Ziele gesetzt (Action). Das Team war wieder motiviert und wir haben die Ziele im nächsten Quartal übertroffen (Result)."
+            """
     }
     
     await cl.Message(
@@ -439,14 +434,14 @@ Das kann 20-30 Sekunden dauern. Du siehst gleich jeden Schritt transparent!"""
         agent_score = result.get("agent_score", 0)
         step.output = f"""**Finaler Agent-Score:** {agent_score}/5
 
-**Berechnungsmethode:** Gewichteter Durchschnitt aller 3 Antworten basierend auf Confidence-Levels der Reflection-Analysen."""
+                        **Berechnungsmethode:** Gewichteter Durchschnitt aller 3 Antworten basierend auf Confidence-Levels der Reflection-Analysen."""
     
     # Dunning-Kruger
     async with cl.Step(name="🎯 Dunning-Kruger Analyse", type="tool") as step:
         dk_msg = f"""**Self-Report:** {result.get('self_report_score', 0)}/5  
-**Agent-Score:** {result.get('agent_score', 0)}/5  
-**Gap:** {result.get('dunning_kruger_gap', 0):+.1f}  
-**Klassifikation:** {result.get('classification', 'unknown')}"""
+                    **Agent-Score:** {result.get('agent_score', 0)}/5  
+                    **Gap:** {result.get('dunning_kruger_gap', 0):+.1f}  
+                    **Klassifikation:** {result.get('classification', 'unknown')}"""
         step.output = dk_msg
     
     # Final Feedback
@@ -454,10 +449,10 @@ Das kann 20-30 Sekunden dauern. Du siehst gleich jeden Schritt transparent!"""
 
 
 async def show_final_feedback(state: AgentState):
-    """Zeigt finales Assessment mit Recommendations"""
+    """Zeigt finales Assessment"""
     session_id = cl.user_session.get("session_id")
     
-    # Save Assessment to Session
+    # Save Assessment
     assessment_data = {
         "skill_id": state.get("selected_skill"),
         "skill_name": GOLEMAN_FRAMEWORK["skills"][state.get("selected_skill")]["name"],
@@ -470,94 +465,108 @@ async def show_final_feedback(state: AgentState):
     }
     
     session_manager.add_assessment(session_id, assessment_data)
-    
-    # Get Progress
     progress = session_manager.get_progress(session_id)
     
-    # Coverage Stats
+    # Stats
     coverage = calculate_indicator_coverage(state.get("response_analyses", []))
     strengths_weaknesses = get_strength_and_weaknesses(
         state.get("response_analyses", []),
         state.get("behavioral_indicators", [])
     )
     
-    # Build Feedback Message
-    skill_name = GOLEMAN_FRAMEWORK["skills"][state.get("selected_skill", "empathy")]["name"]
+    skill_name = GOLEMAN_FRAMEWORK["skills"][state.get("selected_skill")]["name"]
     
+    # Build Feedback
     feedback = f"""# 🎯 Assessment Ergebnis: {skill_name}
 
-## 📊 Deine Scores
+                ## 📊 Deine Scores
 
-| Metrik | Wert |
-|--------|------|
-| Self-Report | {state.get('self_report_score', 0)}/5 |
-| Agent-Score | {state.get('agent_score', 0)}/5 |
-| Gap | {state.get('dunning_kruger_gap', 0):+.1f} |
+                | Metrik | Wert |
+                |--------|------|
+                | Self-Report | {state.get('self_report_score', 0)}/5 |
+                | Agent-Score | {state.get('agent_score', 0)}/5 |
+                | Gap | {state.get('dunning_kruger_gap', 0):+.1f} |
 
----
+                {state.get('dk_interpretation', '')}
 
-{state.get('dk_interpretation', 'Keine Interpretation verfügbar.')}
-
----
-
-## 💪 Deine Stärken
-
-"""
+                ---
+                """
     
+    # Stärken
     if strengths_weaknesses["strengths"]:
+        feedback += "## 💪 Deine Stärken\n\n"
         for strength in strengths_weaknesses["strengths"]:
-            feedback += f"✅ {strength}\n"
+            feedback += f"• {strength}\n"
     else:
-        feedback += "*(Noch keine klaren Stärken identifiziert - antworte ausführlicher für bessere Analyse)*\n"
+        if coverage["coverage_percentage"] < 20:
+            feedback += "## 💪 Deine Stärken\n\n*(Nicht genug Informationen für Analyse - antworte ausführlicher)*\n"
+        else:
+            feedback += "## 💪 Deine Stärken\n\n*(Noch keine klaren Stärken erkennbar)*\n"
     
+    # Entwicklungsfelder
     feedback += "\n## 📈 Entwicklungsfelder\n\n"
-    
-    if strengths_weaknesses["weaknesses"]:
+    if strengths_weaknesses["weaknesses"] and coverage["coverage_percentage"] >= 20:
         for weakness in strengths_weaknesses["weaknesses"]:
-            feedback += f"⚠️ {weakness}\n"
+            feedback += f"• {weakness}\n"
     else:
-        feedback += "*(Keine spezifischen Schwächen - du machst das gut!)*\n"
+        # Zeige alle Indicators als Entwicklungsfelder
+        feedback += "*Alle Behavioral Indicators bieten Entwicklungspotenzial:*\n\n"
+        for indicator in state.get("behavioral_indicators", []):
+            feedback += f"• {indicator}\n"
+    
+    # Empfehlungen
+    feedback += "\n## 💡 Empfehlungen\n\n"
+    
+    if coverage["coverage_percentage"] < 20:
+        feedback += """⚠️ **Deine Antworten waren kurz oder unspezifisch.**
+
+                        **Für bessere Ergebnisse:**
+                        - Beschreibe konkrete Situationen (STAR-Methode)
+                        - 3-5 Sätze pro Frage
+                        - Spezifische Aktionen statt Absichten
+
+                        Möchtest du nochmal versuchen? Schreib **'Neu'**!"""
+    else:
+        # Generiere sinnvolle Empfehlungen
+        if strengths_weaknesses["strengths"]:
+            top_strength = strengths_weaknesses["strengths"][0]
+            feedback += f"**Stärke nutzen:** Setze deine Fähigkeit \"{top_strength}\" gezielt in herausfordernden Situationen ein.\n\n"
+        
+        if strengths_weaknesses["weaknesses"]:
+            top_weakness = strengths_weaknesses["weaknesses"][0]
+            feedback += f"**Entwickeln:** Übe konkret an \"{top_weakness}\" - suche bewusst Situationen wo du das trainieren kannst.\n\n"
+        
+        feedback += f"**Praxis:** Reflektiere täglich 5 Min über deine {skill_name.lower()} in Alltagssituationen."
     
     feedback += f"""
 
----
+                ---
 
-## 💡 Empfehlungen
+                **Indicator Coverage:** {coverage['coverage_percentage']}% ({coverage['found_count']}/{coverage['total_indicators']})
 
-Basierend auf deinen Antworten:
-
-1. **Stärke ausbauen:** Nutze deine {strengths_weaknesses['strengths'][0] if strengths_weaknesses['strengths'] else 'vorhandenen Fähigkeiten'} in herausfordernden Situationen
-2. **Entwicklungsfeld:** Fokussiere dich auf {strengths_weaknesses['weaknesses'][0] if strengths_weaknesses['weaknesses'] else 'weitere Vertiefung'}
-3. **Praxis:** Suche aktiv nach Situationen um diese Kompetenz zu üben
-
-**Indicator Coverage:** {coverage['coverage_percentage']}% ({coverage['found_count']}/{coverage['total_indicators']})
-
----
-
-## 📊 Session Progress: {progress['count']}/5 Dimensionen getestet
-"""
+                ## 📊 Session Progress: {progress['count']}/5 Dimensionen
+                """
     
-    # Motivations-Messages basierend auf Progress
+    # Motivations-Messages
     if progress["count"] == 1:
-        feedback += "\n🎯 **Noch 2 Dimensionen bis zum PDF-Report!** Weiter so!"
+        feedback += "\n🎯 **Noch 2 Dimensionen bis zum PDF-Report!**"
     elif progress["count"] == 2:
-        feedback += "\n🎯 **Noch 1 Dimension bis zum PDF-Report!** Fast geschafft!"
+        feedback += "\n🎯 **Noch 1 Dimension bis zum PDF-Report!**"
     elif progress["count"] == 3:
-        feedback += "\n🎉 **PDF-Report jetzt verfügbar!** Du kannst ihn gleich downloaden. Noch 2 Dimensionen für die vollständige Goleman-Analyse!"
+        feedback += "\n🎉 **PDF-Report verfügbar!** Noch 2 für vollständige Analyse."
     elif progress["count"] == 4:
-        feedback += "\n🔥 **Nur noch 1 Dimension!** Hol dir die komplette Analyse nach Goleman. Kostenlos. Wissenschaftlich fundiert."
+        feedback += "\n🔥 **Nur noch 1 Dimension!** Hol dir die komplette Goleman-Analyse."
     elif progress["count"] == 5:
-        feedback += "\n🏆 **GLÜCKWUNSCH!** Alle 5 Dimensionen nach Goleman getestet! Dein vollständiger Report wartet auf dich."
+        feedback += "\n🏆 **VOLLSTÄNDIG!** Alle 5 Dimensionen getestet!"
     
-    feedback += "\n\n**Schreib 'Neu'** für eine andere Dimension oder **'Fertig'** zum Beenden."
+    feedback += "\n\n**Schreib 'Neu'** für nächste Dimension oder **'Fertig'** zum Beenden."
     
     await cl.Message(content=feedback).send()
     
-    # PDF Export anbieten (nur wenn ≥3 Dimensionen)
+    # PDF-Export anbieten
     if progress["can_download_pdf"]:
-        # Frage ob User PDF will
         pdf_request = await cl.AskActionMessage(
-            content="📄 **PDF-Report verfügbar!** Möchtest du ihn jetzt generieren?",
+            content="📄 **PDF-Report verfügbar!** Jetzt generieren?",
             actions=[
                 cl.Action(name="pdf_yes", value="yes", label="✅ Ja, PDF erstellen"),
                 cl.Action(name="pdf_no", value="no", label="❌ Nein, danke")
@@ -568,7 +577,6 @@ Basierend auf deinen Antworten:
         if pdf_request and pdf_request.get("value") == "yes":
             await offer_pdf_export(session_id)
     
-    # Set flag for next action
     cl.user_session.set("awaiting_next_action", True)
     cl.user_session.set("state", None)
 
@@ -587,13 +595,13 @@ async def offer_pdf_export(session_id: str):
     name_response = await cl.AskUserMessage(
         content="""## 📄 PDF-Report verfügbar!
 
-Du hast **{count}/5 Dimensionen** getestet.
+                Du hast **{count}/5 Dimensionen** getestet.
 
-Möchtest du deinen personalisierten PDF-Report?
+                Möchtest du deinen personalisierten PDF-Report?
 
-**Gib deinen Namen ein** (erscheint im Zertifikat):""".format(count=progress["count"]),
-        timeout=300
-    ).send()
+                **Gib deinen Namen ein** (erscheint im Zertifikat):""".format(count=progress["count"]),
+                        timeout=300
+                    ).send()
     
     participant_name = name_response['output'].strip()
     
@@ -605,11 +613,11 @@ Möchtest du deinen personalisierten PDF-Report?
     consent = await cl.AskActionMessage(
         content="""## 🔒 Datenschutz
 
-Deine Daten sind sicher! 
+                    Deine Daten sind sicher! 
 
-Möchtest du deine Ergebnisse **(anonymisiert)** für wissenschaftliche Analytics freigeben?
+                    Möchtest du deine Ergebnisse **(anonymisiert)** für wissenschaftliche Analytics freigeben?
 
-Dies hilft, das Tool zu verbessern.""",
+                    Dies hilft, das Tool zu verbessern.""",
         actions=[
             cl.Action(name="consent_yes", value="yes", label="✅ Ja, freigeben"),
             cl.Action(name="consent_no", value="no", label="❌ Nein, privat halten")
@@ -653,12 +661,12 @@ Dies hilft, das Tool zu verbessern.""",
     await cl.Message(
         content=f"""## 🎉 Dein Report ist fertig, {participant_name}!
 
-**Klicke hier zum Download:**
+                **Klicke hier zum Download:**
 
-[📄 **EI-Assessment Report herunterladen**](/{pdf_filename})
+                [📄 **EI-Assessment Report herunterladen**](/{pdf_filename})
 
 
-Möchtest du weitere Dimensionen testen? **Schreib 'Neu'!**"""
+                Möchtest du weitere Dimensionen testen? **Schreib 'Neu'!**"""
     ).send()
 
 if __name__ == "__main__":

@@ -49,6 +49,13 @@ class ReflectionAgent:
 
                         Analysiere User-Antworten schrittweise mit Chain-of-Thought:
 
+                        WICHTIG - BEWERTUNGSPRINZIPIEN:
+                        - Sei wohlwollend: Wenn ein Indicator auch nur ansatzweise erkennbar ist → found=true
+                        - Implizite Hinweise zählen: "hab das gelöst" → zeigt Problemlösungskompetenz
+                        - Kurze Antworten: Extrahiere das Maximum aus wenigen Worten
+                        - Benefit of the doubt: Im Zweifel für den User
+                        - Fokus auf Stärken: Suche aktiv nach positiven Signalen
+
                         SCHRITT 1: STAR Extraction
                         - Situation: Was war der Kontext?
                         - Task: Welche Herausforderung?
