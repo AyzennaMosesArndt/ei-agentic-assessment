@@ -118,19 +118,18 @@ Based on:
 - **Kruger, J., & Dunning, D. (1999).** *Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments*
 - **STAR Method** - Behavioral interviewing technique
 
+## 🌐 Live Demo & Prototyp
+
+- **🚀 Funktionale Demo**: [Hugging Face Spaces](https://huggingface.co/spaces/magic-moses/ei-agentic-assessment)
+- **🎨 UI-Prototyp (v2.0)**: [Lovable Mockup](https://agentic-ei-assessment.lovable.app)
+- **📊 UX-Evaluation**: [Google Forms](https://docs.google.com/forms/d/e/1FAIpQLSd-K3jSb_vl7bLJP7jsi-l7CvkSJXRedc7kqwxuakkueZyfNg/viewform?usp=dialog)
+
 ## 🎓 Academic Context
 
 - Agentic AI systems
 - Explainable AI (XAI)
 - Human-AI interaction
 - Soft skill assessment
-
-## 📈 Evaluation Metrics
-
-- **Inter-Agent Agreement**: >85% correlation between Reflection and Assessment
-- **User Trust**: Measured via System Usability Scale (SUS)
-- **UX Study**: Evaluated UX with representative group of users
-- **XAI Quality**: Reasoning comprehension >4/5
 
 ## 🤝 Contributing
 
@@ -145,6 +144,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Your Name**
 - GitHub: [@AyzennaMosesArndt](https://github.com/AyzennaMosesArndt)
 - LinkedIn: [Ayzenna Moses Arndt](https://linkedin.com/in/AyzennaMosesArndt)
+- Live Demo: [Hugging Face Spaces](https://huggingface.co/spaces/magic-moses/ei-agentic-assessment)
 
 ## 🙏 Acknowledgments
 
