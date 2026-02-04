@@ -131,6 +131,30 @@ Based on:
 - Human-AI interaction
 - Soft skill assessment
 
+## 📈 Evaluation Results
+
+**System Usability:**
+- ✅ **SUS Score: 96.4/100** 
+- ✅ **100% Would Recommend**
+- ✅ Ease of Use: 5.0/5
+- ✅ PDF Report: 5.0/5 
+
+**Dunning-Kruger Awareness:**
+- ✅ **71% reflected on their self-perception**
+- ✅ 71% were surprised by the gap
+
+**XAI Comprehensibility:**
+- ⚠️ Understanding score calculation: 2.43/5
+- → **Solution**: [UI Prototype v2.0](https://agentic-ei-assessment.lovable.app) with Score Breakdown + Inline Highlighting
+
+## 🎨 Prototype v2.0 (Lovable)
+
+The [interactive prototype](https://agentic-ei-assessment.lovable.app) addresses the XAI transparency issues identified in the evaluation:
+
+1. **Score Breakdown Card**: Shows calculation from 3 individual questions
+2. **Inline Highlighting**: Marks text passages → indicators
+3. **Transparent Progress Bar**: Real-time visualization of all agent steps
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
